@@ -1,0 +1,290 @@
+/*Universal Styles*/
+body{
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  color: hsl(0, 0%, 25%);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+header,
+main,
+footer {
+  position: relative;
+  top: 4rem;
+}
+
+h1{
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+h2{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+h3{
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.4;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+span.byline {
+  font-weight: 600;
+  padding: 2rem 0;
+  display: block;
+  font-size: 0.9rem;
+}
+
+.aside-details span {
+  padding: 0.5rem 0;
+  display: block;
+}
+
+a.read-more {
+  color: hsl(24, 100%, 50%);
+  font-weight: 700;
+  transition: color 200ms ease;
+}
+
+a.read-more:hover {
+  color: hsl(231, 100%, 45%);
+}
+
+.featured-background {
+  background-color: hsl(0, 0%, 85%);
+}
+
+/* Nav Section */
+nav {
+  z-index: 10;
+  position: fixed;
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  border-bottom: 0.1rem solid hsl(0, 0%, 85%);
+}
+nav .container {
+  height: 4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  align-items: center;
+  text-transform: uppercase;
+  margin-left: 1.5rem;
+}
+
+.logo img {
+  height: 2rem;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  color: hsl(231, 100%, 45%);
+  letter-spacing: 0.1rem;
+}
+
+span.colmar {
+  font-weight: 700;
+  margin-left: 0.3rem;
+}
+
+span.academy {
+  font-weight: 400;
+  margin-left: 0.1rem;
+}
+
+ul.menu-desktop {
+  margin-right: 1.5rem;
+}
+
+.menu-desktop li {
+  display: inline;
+  margin-left: 1rem;
+
+}
+
+.menu-desktop a {
+  font-weight: 700;
+  color: hsl(231, 100%, 45%);
+  transition: color 200ms ease;
+}
+
+.menu-desktop a:hover {
+  color: hsl(24, 100%, 50%);
+}
+
+/* Header Section */
+header {
+  background-color: hsl(231, 100%, 45%);
+}
+
+header .container {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header img {
+  width: 60%;
+  height: auto;
+  padding: 2rem 1.5rem;
+  display: block;
+}
+
+.headline{
+  padding-right: 1.5rem;
+}
+
+header h1,
+header h3{
+  color: hsl(0, 0%, 100%);
+}
+
+a.button {
+  width: 100%;
+  padding: 1rem 0;
+  margin-top: 2.75rem;
+  text-align: center;
+  background-color: hsl(24, 100%, 50%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  display: block;
+  transition: all 300ms ease;
+}
+
+a.button:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(24, 100%, 50%);
+}
+
+/* Main Content */
+/* About Section */
+article.feature {
+  width: 60%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+}
+
+.feature img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 2rem 0;
+}
+
+aside {
+  width: 40%;
+  flex-direction: column;
+  border-left: 0.01rem solid hsl(0, 0%, 85%);
+  border-right: 0.01rem solid hsl(0, 0%, 85%);
+}
+
+.aside-item {
+  border-bottom: 0.01rem solid hsl(0, 0%, 85%);
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.aside-item img {
+  width: 35%;
+  height: auto;
+  display: block;
+  margin: 1rem;
+}
+
+/* Programs Section */
+section#programs {
+  background-color: hsl(24, 100%, 50%);
+}
+
+#programs h2 {
+  padding-top: 2rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+
+.programs-container {
+  padding: 0 4.5rem 0 4.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.program {
+  width: 31%;
+  background-color: hsl(0, 0%, 100%);
+  margin-bottom: 2rem;
+}
+
+.program img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.program-info {
+  padding: 1rem;
+}
+
+.program-info .uppercase {
+  padding: 0.25rem 0;
+}
+
+/*Thesis Section*/
+#thesis-exhibit h2 {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+article.video {
+  width: 60%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 2rem;
+
+}
+
+.video video {
+  width: 100%;
+  height: auto;
+  padding-bottom: 2rem;
+}
+
+/*Footer*/
+Footer {
+  height: 4rem;
+  font-size: 0.75rem;
+  background-color: hsl(231, 100%, 45%);
+  color: hsl(0, 0%, 100%);
+}
+
+footer .container {
+  padding: 1.25rem 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
