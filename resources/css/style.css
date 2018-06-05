@@ -1,4 +1,36 @@
 /*Universal Styles*/
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu3cOWxw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu3cOWxw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdu3cOWxw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 body{
   font-size: 16px;
   font-family: "Source Sans Pro", sans-serif;
@@ -25,7 +57,7 @@ footer {
 h1{
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1.25rem;
+  margin: 2rem 0 1.5rem 0;
 }
 
 h2{
@@ -37,7 +69,7 @@ h2{
 h3{
   font-size: 1.5rem;
   font-weight: 400;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 a{
@@ -45,7 +77,7 @@ a{
 }
 
 p {
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .uppercase{
@@ -87,9 +119,9 @@ nav {
   border-bottom: 0.1rem solid hsl(0, 0%, 85%);
 }
 nav .container {
-  height: 4rem;
   justify-content: space-between;
   align-items: center;
+  height: 4rem;
 }
 
 .logo {
@@ -100,6 +132,10 @@ nav .container {
 
 .logo img {
   height: 2rem;
+}
+
+img.menu-mobile {
+  display: none;
 }
 
 .logo span {
@@ -138,6 +174,30 @@ ul.menu-desktop {
   color: hsl(24, 100%, 50%);
 }
 
+/* Nav Mobile */
+@media only screen and (max-width: 767px) {
+  nav .container{
+  }
+
+  .logo {
+    margin-right: 1.5rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  ul.menu-desktop {
+    display: none;
+  }
+
+  img.menu-mobile {
+    display: inline;
+  }
+}
+
 /* Header Section */
 header {
   background-color: hsl(231, 100%, 45%);
@@ -155,7 +215,7 @@ header img {
   display: block;
 }
 
-.headline{
+div.headline{
   padding-right: 1.5rem;
 }
 
@@ -167,7 +227,8 @@ header h3{
 a.button {
   width: 100%;
   padding: 1rem 0;
-  margin-top: 2.75rem;
+  margin-top: 1.25rem;
+  margin-bottom: 2rem;
   text-align: center;
   background-color: hsl(24, 100%, 50%);
   color: hsl(0, 0%, 100%);
@@ -179,6 +240,29 @@ a.button {
 a.button:hover {
   background-color: hsl(0, 0%, 100%);
   color: hsl(24, 100%, 50%);
+}
+
+/* Header Mobile */
+@media only screen and (max-width: 767px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  header img {
+    width: 100%;
+    padding: 0;
+  }
+
+  div.headline {
+    width: 93%;
+    padding: 0 1rem;
+  }
+
+  a.button{
+    padding: 1.5rem 0;
+  }
 }
 
 /* Main Content */
@@ -206,15 +290,67 @@ aside {
 
 .aside-item {
   border-bottom: 0.01rem solid hsl(0, 0%, 85%);
-  align-items: center;
-  padding-right: 1rem;
+  align-items: flex-start;
+  padding: 1rem;
 }
 
 .aside-item img {
   width: 35%;
   height: auto;
   display: block;
-  margin: 1rem;
+  margin-right: 1rem;
+}
+
+img.img-mobile {
+  display: none;
+}
+
+#about aside {
+  padding-top: 1rem;
+}
+
+/* About Mobile */
+@media only screen and (max-width: 767px) {
+  article.feature {
+    display: none;
+  }
+
+  aside {
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    margin: 0rem 0 1rem 0;
+  }
+
+  #about aside {
+    padding-top: 0;
+  }
+
+  .aside-item {
+    border-bottom: none;
+    flex-direction: column;
+  }
+
+  .aside-item img {
+    width: 100%;
+    margin: 0rem 0rem 1rem 0rem;
+  }
+
+  img.img-desktop {
+    display: none;
+  }
+
+  img.img-mobile {
+    display: block;
+  }
+
+  .aside-details {
+    padding-left: 1rem;
+  }
+
+  .featured-background {
+    background-color: hsl(0, 0%, 100%);
+  }
 }
 
 /* Programs Section */
@@ -255,6 +391,32 @@ section#programs {
   padding: 0.25rem 0;
 }
 
+/* Programs Mobile */
+@media only screen and (max-width: 767px) {
+  .programs-container {
+    padding: 0 1rem 2rem 1rem;
+    flex-direction: column;
+  }
+
+  .program img,
+  .program-info p {
+    display: none;
+  }
+
+  .program {
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+
+  .program-info {
+    padding: 2.5rem 1rem 2rem 1rem;
+  }
+
+  #programs h3 {
+    color: hsl(24, 100%, 50%);
+  }
+}
+
 /*Thesis Section*/
 #thesis-exhibit h2 {
   margin: 2rem 0;
@@ -263,20 +425,30 @@ section#programs {
 
 article.video {
   width: 60%;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  margin-bottom: 2rem;
-
+  padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
 .video video {
   width: 100%;
-  height: auto;
-  padding-bottom: 2rem;
+}
+
+/*Thesis Mobile*/
+@media only screen and (max-width: 767px) {
+  #thesis-exhibit aside,
+  article.video h3,
+  article.video p {
+    display: none;
+  }
+
+  article.video {
+    width: 100%;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
 }
 
 /*Footer*/
-Footer {
+footer {
   height: 4rem;
   font-size: 0.75rem;
   background-color: hsl(231, 100%, 45%);
@@ -287,4 +459,24 @@ footer .container {
   padding: 1.25rem 1.5rem;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+.legal span {
+  margin-left: 0.5rem;
+}
+
+/*Footer Mobile*/
+@media only screen and (max-width: 767px) {
+  footer {
+    height: auto;
+  }
+
+  footer .container {
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .legal {
+    display: none;
+  }
 }
